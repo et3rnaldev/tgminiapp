@@ -1,3 +1,15 @@
+@font-face {
+    font-family: "SF Pro Rounded";
+    src: url("assets/fonts/SF-Pro-Display-Semibold.otf");
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "SF Pro Rounded";
+    src: url("assets/fonts/SF-Pro-Display-Medium.otf");
+    font-weight: 500;
+}
+
 * {
     box-sizing: border-box;
     color: white;
@@ -34,14 +46,15 @@ body {
 
 .app {
     background-color: rgba(255, 255, 255, 0.01);
-    min-height: 70vh;
+    min-height: 56vh;
     margin-top: 16px;
 
     display: flex;
     margin: 24px;
-    flex-direction: row;
+    flex-direction: column;
     padding: 20px;
     border-radius: 17px;
+    gap: 12px;
 }
 
 .song {
@@ -71,5 +84,36 @@ body {
     margin: 4px 0 0;
     opacity: 0.6;
     font-size: 0.9rem;
+}
 
+.categories {
+    background-color: rgba(1, 1, 1, 0.10);
+    min-height: 10vh;
+    display: flex;
+    margin: 24px;
+    border-radius: 25px;
+    gap: 25px;
+    justify-content: center;
+    
+}
+
+.category {
+    align-content: center;
+}
+
+.category h3 {
+    font-size: 0.8em;
+    color: gray;
+    cursor: pointer;
+    font-family: "SF Pro Rounded", sans-serif;
+    font-weight: 500;
+}
+
+.selected h3 {
+    color: white;
+    background-image: linear-gradient(to right, #482765, #9253FF);
+    padding: 11px 24px;
+    border-radius: 100px;
+    font-family: "SF Pro Rounded", sans-serif;
+    font-weight: 600;
 }
